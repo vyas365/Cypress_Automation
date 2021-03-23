@@ -1,0 +1,14 @@
+{
+  "name": "cypress-example",
+  "version": "1.0.0",
+  "description": "Airtable assignment using Cypress",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vyas365/Cypress_Automation.git"
+  },
+  "author": "Veda Vyas Prabu",
+  "license": "ISC"
+}
