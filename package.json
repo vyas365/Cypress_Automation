@@ -1,5 +1,5 @@
 {
-  "name": "cypress-example",
+  "name": "Example Cypress",
   "version": "1.0.0",
   "description": "Airtable assignment using Cypress",
   "scripts": {
@@ -10,5 +10,10 @@
     "url": "git+https://github.com/vyas365/Cypress_Automation.git"
   },
   "author": "Veda Vyas Prabu",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "@testing-library/cypress": "^7.0.4",
+    "cypress": "^6.8.0"
+  }
 }
