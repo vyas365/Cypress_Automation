@@ -1,0 +1,26 @@
+export default {
+    signup: "[href='/login']+[href='/signup']",
+    selectAnOption: "[aria-label='Select an option']",
+    continueToNextStep: "[aria-label='Continue to next step']",
+    skipSetup: "[aria-label='Skip workspace setup step']",
+    myFirstWorkSpace: "//h2[contains(text(),'My First Workspace')]",
+    createBase: "[aria-label='Create Base from scratch']",
+    homeButton: "[id='appTopBarHomeButton']",
+    shareBase: "[class='parentColoredText']",
+    addBaseCollaborator: (index) =>
+        `[class='dialog'] [class='flex']>div:nth-child(${index})`,
+    haveExistingProject: "[class='display']",
+    skipExistingProject: "//a[contains(text(),'Skip')]",
+    goHome: "[class*='self-end bottom-0 right']",
+    inviteCollaborators:
+        "[placeholder='Invite more base collaborators via email'][role='combobox']",
+    selectMenuButton: "[class='flex flex-none ml1']>div[class='selectMenu']",
+    sendInviteButton: "[class='flex-none ml1 flex']",
+    inviteByLink: "//*[contains(text(),'Invite by link')]",
+    inviteByEmail: "//*[contains(text(),'Invite by email')]",
+    verifyBaseCollaborator: "[href*='Base-Collaborator']",
+    editorRole: "//*[contains(text(),'Editor')]",
+    // createBase: "[aria-label='Create Base from scratch']",
+    // createBase: "[aria-label='Create Base from scratch']",
+    // createBase: "[aria-label='Create Base from scratch']",
+}
