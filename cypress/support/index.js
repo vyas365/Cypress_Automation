@@ -16,6 +16,10 @@
 // Import commands.js using ES2015 syntax:
 //require('./commands')
 
+//https://stackoverflow.com/questions/53845493/cypress-uncaught-assertion-error-despite-cy-onuncaughtexception
+Cypress.on('uncaught:exception', (err, runnable) => {
+    return false
+})
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 

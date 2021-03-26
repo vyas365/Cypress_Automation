@@ -8,6 +8,7 @@
 // https://on.cypress.io/custom-commands
 // ***********************************************
 import selectors from './selectors'
+import testData from './testData'
 
 // this function is for temp purpose to generate unique string for email
 export const uniqueEmailData = () => {
@@ -38,8 +39,8 @@ Cypress.Commands.add('signupAccount', (fullname, password) => {
             cy.get(selectors.inputPassword, { timeout: 10000 }).type(password)
             cy.get(selectors.continue).click()
         } else if ($body.find(selectors.firstName).length > 0) {
-            cy.get(selectors.firstName).type('abc')
-            cy.get(selectors.lastName).type('def')
+            cy.get(selectors.firstName).type(testData.firstName)
+            cy.get(selectors.lastName).type(testData.lastName)
             cy.get(selectors.inputTypeEmail).type(
                 `${uniqueEmailData()}@test.com`
             )
