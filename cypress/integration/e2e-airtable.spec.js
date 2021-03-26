@@ -2,9 +2,8 @@ import { dropdownOption, menuOption } from '../support/command'
 import selectors from '../support/selectors.js'
 
 context('Airtable Automation Assignment', () => {
-    const url = 'https://airtable.com'
     before(() => {
-        cy.visit(url)
+        cy.visit('https://airtable.com/')
     })
 
     it('Should successfully create an account', () => {
@@ -31,7 +30,7 @@ context('Airtable Automation Assignment', () => {
         cy.xpath(selectors.myFirstWorkSpace).should('be.visible')
     })
     it('Should successfully create a base', () => {
-        cy.login(url, 'vv11@test.com', '12345678')
+        cy.login('https://airtable.com', 'vv11@test.com', '12345678')
         cy.veryifyBaseCreation('test1')
         cy.get(selectors.shareBase).click()
         cy.get(selectors.addBaseCollaborator(2)).click()
