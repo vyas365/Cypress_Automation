@@ -1,4 +1,5 @@
-import { dropdownOption, menuOption } from '../support/command'
+import { dropdownOption, menuOption, uniqueEmailData } from '../support/command'
+
 import selectors from '../support/selectors'
 import testData from '../support/testData'
 
@@ -33,7 +34,7 @@ context('Airtable Automation Assignment', () => {
     })
     it('Should successfully create a base', () => {
         cy.login(url, testData.loginUserName, testData.password)
-        cy.veryifyBaseCreation('test1')
+        cy.veryifyBaseCreation(uniqueEmailData())
         cy.get(selectors.shareBase).click()
         cy.get(selectors.addBaseCollaborator(2)).click()
         cy.get(selectors.inviteCollaborators).type(testData.inviteCollaborators)

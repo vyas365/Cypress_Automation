@@ -20,7 +20,7 @@ export default {
     inviteByLink: "//*[contains(text(),'Invite by link')]",
     inviteByEmail: "//*[contains(text(),'Invite by email')]",
     verifyBaseCollaborator: "[href*='Base-Collaborator']",
-    editorRole: "//*[contains(text(),'Editor')]",
+    editorRole: "//div[contains(text(),'Editor')]",
     dropdownMenu: (index) =>
         `[class='hdropdown selectMenuList menu'] >li:nth-child(${index})`,
     menuOption: (index) =>
@@ -36,8 +36,5 @@ export default {
     password: "[type='password']",
     signupForFree: "[value='Sign up for free']",
     loginButton: "[href='/login'][class*='big']",
-    signInButton: "[value='Sign in']",
-    // createBase: "[aria-label='Create Base from scratch']",
-    // createBase: "[aria-label='Create Base from scratch']",
-    // createBase: "[aria-label='Create Base from scratch']",
+    // signInButton: "[value='Sign in']",
 }

@@ -9,6 +9,7 @@
 // ***********************************************
 import selectors from './selectors'
 import testData from './testData'
+import '@testing-library/cypress/add-commands'
 
 // this function is for temp purpose to generate unique string for email
 export const uniqueEmailData = () => {
@@ -20,6 +21,7 @@ export const dropdownOption = (index) => {
 export const menuOption = (index) => {
     return cy.get(selectors.menuOption(index), { timeout: 5000 })
 }
+// function to verify creating base
 Cypress.Commands.add('veryifyBaseCreation', (baseName) => {
     cy.get(selectors.createBase).click()
     cy.get(selectors.inputTypeText).type(baseName)
@@ -55,5 +57,5 @@ Cypress.Commands.add('login', (url, email, password) => {
     cy.get(selectors.loginButton).click()
     cy.get(selectors.inputTypeEmail).type(email)
     cy.get(selectors.password).type(password)
-    cy.get(selectors.signInButton).click()
+    cy.findByDisplayValue(testData.signInButton).should('be.visible').click()
 })

@@ -3,6 +3,7 @@ export default {
     lastName: 'def',
     fullName: 'ghi',
     password: 'welcome12345',
-    loginUserName: 'vv321@test.com',
+    loginUserName: 'test888@test.com',
     inviteCollaborators: 'ads@test.com',
+    signInButton: 'Sign in',
 }
