@@ -27,7 +27,7 @@ Cypress.Commands.add('veryifyBaseCreation', (baseName) => {
     cy.get(selectors.inputTypeText).type(baseName)
     cy.get(selectors.homeButton).click()
     cy.get(`a[aria-label=${baseName}]`).should('be.visible')
-    cy.get(`a[aria-label=${baseName}]`).click({ multiple: true, force: true })
+    cy.findByLabelText(baseName).should('exist').click()
 })
 
 Cypress.Commands.add('signupAccount', (fullname, password) => {

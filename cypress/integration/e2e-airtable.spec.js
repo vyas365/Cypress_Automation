@@ -16,13 +16,11 @@ context('Airtable Automation Assignment', () => {
             if ($body.find(selectors.selectAnOption).length > 0) {
                 cy.get(selectors.selectAnOption).click()
                 dropdownOption(1).click()
-                cy.get(selectors.continueToNextStep).click()
-                cy.get(selectors.skipSetup).click()
             } else {
                 menuOption(1).click()
-                cy.get(selectors.continueToNextStep).click()
-                cy.get(selectors.skipSetup).click()
             }
+            cy.get(selectors.continueToNextStep).click()
+            cy.get(selectors.skipSetup).click()
         })
         cy.get('body').then(($body) => {
             if ($body.find(selectors.haveExistingProject).length > 0) {
@@ -56,7 +54,9 @@ context('Airtable Automation Assignment', () => {
                 dropdownOption(2).click()
                 cy.xpath(selectors.editorRole).should('have.text', 'Editor')
             } else {
-                throw new Error('Base Collaborator is not found')
+                throw new Error(
+                    'Base Collaborator with Editor Role is not found'
+                )
             }
         })
     })
